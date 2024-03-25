@@ -196,7 +196,7 @@ We use this categorical data encoding technique when the features are nominal(do
 
   ![m2](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/9c011486-2fd5-4752-b434-702ecc5bebdc)
 
-    
+    ```
     from sklearn.preprocessing import QuantileTransformer
     qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
 
@@ -210,6 +210,6 @@ We use this categorical data encoding technique when the features are nominal(do
   ![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
 
 
-  # RESULT:
+  ## RESULT:
   
-        Hence performing Feature Encoding and Transformation process is Successful.
+   Hence performing Feature Encoding and Transformation process is Successful.
