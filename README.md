@@ -174,9 +174,11 @@ df["Moderate Negative Skew"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
 ```
+
 ![24](https://github.com/chgeethika/EXNO-3-DS/assets/142209368/f7443531-3456-4018-8b84-09d1d506d7ca)
 
-# RESULT:
-      Finally,perform Feature Encoding and Transformation process is executed successfully.
+## RESULT:
+
+  Finally,perform Feature Encoding and Transformation process is executed successfully.
 
        
