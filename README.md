@@ -205,10 +205,11 @@ We use this categorical data encoding technique when the features are nominal(do
     sm.qqplot(df["Moderate Negative Skew"],line='45')
     plt.show()
     
-    
+    ```
 
   ![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
 
 
   # RESULT:
+  
         Hence performing Feature Encoding and Transformation process is Successful.
