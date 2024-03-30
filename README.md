@@ -106,9 +106,9 @@ We use this categorical data encoding technique when the features are nominal(do
     dfb1=df.copy()
     dfb
  
-    ~~~
+ ~~~
 
-  ![img 9](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/9b983cb5-c712-49d8-bcd8-817ca7f56947)
+ ![img 9](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/9b983cb5-c712-49d8-bcd8-817ca7f56947)
 
  ~~~
     from category_encoders import TargetEncoder
