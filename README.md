@@ -39,21 +39,21 @@ We use this categorical data encoding technique when the features are nominal(do
   ![img1](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/eca0e23d-6ea3-4685-ad3e-3a3c688afce4)
 
 
-    ```
+  ```
     from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
     pm=['Hot','Warm','Cold']
     e1=OrdinalEncoder(categories=[pm])
     e1.fit_transform(df[["ord_2"]])
-    ```
+  ```
 
   ![img 2](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/6f0fce59-7852-489d-a76f-db5988a45a3b)
 
 
 
-    ```
+   ```
     df['bo2']=e1.fit_transform(df[["ord_2"]])
     df
-    ```
+  ```
 
   ![img 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/84e9360b-9728-444d-bbe3-f7480e9633f6)
 
@@ -68,30 +68,30 @@ We use this categorical data encoding technique when the features are nominal(do
     dfc=df.copy()
     dfc['ord_2']=le.fit_transform(dfc['ord_2'])
     dfc
-    ```
+ ```
 
   ![img 5](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/1c7de496-371e-4a21-a189-7ed70ecc2900)
 
-    ```
+ ```
     from sklearn.preprocessing import OneHotEncoder
     ohe=OneHotEncoder(sparse=False)
     df2=df.copy()
     enc=pd.DataFrame(ohe.fit_transform(df2[['nom_0']]))
     df2=pd.concat([df2,enc],axis=1)
     df2
-    ```
+ ```
 
   ![img 6](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/a8c5038b-2814-4b1d-8f85-c27b292c04d4)
 
-    ```
+ ```
     pd.get_dummies(df2,columns=["nom_0"])
-    ```
+```
 
   ![img 7](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/797cb3cf-cc31-4c39-ba12-af1d740bbbed)
 
-    ```
+```
     pip install --upgrade category_encoders
-    ```
+```
 
   ![img 8](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/eba5c171-3e23-483f-b4ed-6f4c47b5e89b)
 
