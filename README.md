@@ -172,15 +172,17 @@ We use this categorical data encoding technique when the features are nominal(do
     df["Moderate Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Moderate Negative Skew"])
     df.skew()
 ~~~
+
   ![i 8](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/90edf1a6-0480-49e3-9fe6-7ac276d2acf3)
 
-    ```
+~~~
     df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
     df.skew()
-    ```
+
+~~~
   ![i 9](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/af78ba87-bd09-43e8-a612-406cad9d7686)
 
-    ```
+~~~
    import matplotlib.pyplot as plt
    import seaborn as sns
    import statsmodels.api as sm
@@ -189,17 +191,17 @@ We use this categorical data encoding technique when the features are nominal(do
    sm.qqplot(df["Moderate Negative Skew"],line='45')
 
    plt.show()
-    ```
+  ~~~
 
   ![m1](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/b72a5319-b492-4c91-981e-15bf8d38c539)
 
-    ```
+~~~
     sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
-    ```
+~~~
 
   ![m2](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/9c011486-2fd5-4752-b434-702ecc5bebdc)
 
-    ```
+~~~
     from sklearn.preprocessing import QuantileTransformer
     qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
 
@@ -208,7 +210,7 @@ We use this categorical data encoding technique when the features are nominal(do
     sm.qqplot(df["Moderate Negative Skew"],line='45')
     plt.show()
     
-    ```
+~~~
 
   ![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
 
