@@ -30,7 +30,7 @@ We use this categorical data encoding technique when the features are nominal(do
 • Boxcox method
 • Yeojohnson method
 
-# CODING AND OUTPUT:
+## CODING AND OUTPUT:
     ```
      import pandas as pd
      df=pd.read_csv("/content/Encoding Data.csv")
