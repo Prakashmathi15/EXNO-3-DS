@@ -1,65 +1,66 @@
 ## EXNO-3-DS
 
-## AIM:
+# AIM:
 To read the given data and perform Feature Encoding and Transformation process and save the data to a file.
 
-## ALGORITHM:
+# ALGORITHM:
 STEP 1:Read the given Data.
 STEP 2:Clean the Data Set using Data Cleaning Process.
 STEP 3:Apply Feature Encoding for the feature in the data set.
 STEP 4:Apply Feature Transformation for the feature in the data set.
 STEP 5:Save the data to the file.
 
-## FEATURE ENCODING:
-1. Ordinal Encoding           
+# FEATURE ENCODING:
+1. Ordinal Encoding
 An ordinal encoding involves mapping each unique label to an integer value. This type of encoding is really only appropriate if there is a known relationship between the categories. This relationship does exist for some of the variables in our dataset, and ideally, this should be harnessed when preparing the data.
-2. Label Encoding    
+2. Label Encoding
 Label encoding is a simple and straight forward approach. This converts each value in a categorical column into a numerical value. Each value in a categorical column is called Label.
-3. Binary Encoding       
+3. Binary Encoding
 Binary encoding converts a category into binary digits. Each binary digit creates one feature column. If there are n unique categories, then binary encoding results in the only log(base 2)ⁿ features.
-4. One Hot Encoding       
+4. One Hot Encoding
 We use this categorical data encoding technique when the features are nominal(do not have any order). In one hot encoding, for each level of a categorical feature, we create a new variable. Each category is mapped with a binary variable containing either 0 or 1. Here, 0 represents the absence, and 1 represents the presence of that category.
 
 # Methods Used for Data Transformation:
-  # 1. FUNCTION TRANSFORMATION       
-• Log Transformation    
+  # 1. FUNCTION TRANSFORMATION
+• Log Transformation
 • Reciprocal Transformation
 • Square Root Transformation
 • Square Transformation
-  # 2. POWER TRANSFORMATION        
+  # 2. POWER TRANSFORMATION
 • Boxcox method
 • Yeojohnson method
 
-## CODING AND OUTPUT:
-```
+# CODING AND OUTPUT:
+    ```
      import pandas as pd
      df=pd.read_csv("/content/Encoding Data.csv")
      df
-```
+    ```
   ![img1](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/eca0e23d-6ea3-4685-ad3e-3a3c688afce4)
 
 
-  ```
+    ```
     from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
     pm=['Hot','Warm','Cold']
     e1=OrdinalEncoder(categories=[pm])
     e1.fit_transform(df[["ord_2"]])
-  ```
+    ```
 
   ![img 2](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/6f0fce59-7852-489d-a76f-db5988a45a3b)
 
-```
-df['bo2']=e1.fit_transform(df[["ord_2"]])
-df
-```
-![img 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/84e9360b-9728-444d-bbe3-f7480e9633f6)
 
 
- ```
+    ```
     df['bo2']=e1.fit_transform(df[["ord_2"]])
     df
-```
+    ```
 
+  ![img 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/84e9360b-9728-444d-bbe3-f7480e9633f6)
+
+    ```
+    df['bo2']=e1.fit_transform(df[["ord_2"]])
+    df
+    ```
   ![img 4](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/addbdb92-ff8a-41f3-af9e-bd97ac6800a2)
 
     ```
@@ -67,30 +68,30 @@ df
     dfc=df.copy()
     dfc['ord_2']=le.fit_transform(dfc['ord_2'])
     dfc
- ```
+    ```
 
   ![img 5](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/1c7de496-371e-4a21-a189-7ed70ecc2900)
 
- ```
+    ```
     from sklearn.preprocessing import OneHotEncoder
     ohe=OneHotEncoder(sparse=False)
     df2=df.copy()
     enc=pd.DataFrame(ohe.fit_transform(df2[['nom_0']]))
     df2=pd.concat([df2,enc],axis=1)
     df2
- ```
+    ```
 
   ![img 6](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/a8c5038b-2814-4b1d-8f85-c27b292c04d4)
 
- ```
+    ```
     pd.get_dummies(df2,columns=["nom_0"])
-```
+    ```
 
   ![img 7](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/797cb3cf-cc31-4c39-ba12-af1d740bbbed)
 
-```
+    ```
     pip install --upgrade category_encoders
-```
+    ```
 
   ![img 8](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/eba5c171-3e23-483f-b4ed-6f4c47b5e89b)
 
@@ -206,11 +207,12 @@ df
     
     ```
 
-![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
+  ![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
 
 
   ## RESULT:
-  Hence performing Feature Encoding and Transformation process is Successful.
+  
+    Hence performing Feature Encoding and Transformation process is Successful.
         
 
        
