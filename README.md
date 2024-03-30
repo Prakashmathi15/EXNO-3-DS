@@ -48,19 +48,18 @@ We use this categorical data encoding technique when the features are nominal(do
 
   ![img 2](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/6f0fce59-7852-489d-a76f-db5988a45a3b)
 
+```
+df['bo2']=e1.fit_transform(df[["ord_2"]])
+df
+```
+![img 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/84e9360b-9728-444d-bbe3-f7480e9633f6)
 
 
-   ```
+ ```
     df['bo2']=e1.fit_transform(df[["ord_2"]])
     df
-  ```
+```
 
-  ![img 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/84e9360b-9728-444d-bbe3-f7480e9633f6)
-
-    ```
-    df['bo2']=e1.fit_transform(df[["ord_2"]])
-    df
-    ```
   ![img 4](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/addbdb92-ff8a-41f3-af9e-bd97ac6800a2)
 
     ```
@@ -207,7 +206,7 @@ We use this categorical data encoding technique when the features are nominal(do
     
     ```
 
-    ![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
+![m 3](https://github.com/nanditha121/EXNO-3-DS/assets/142209508/880ace95-7dd1-4732-941d-e007439a6fc5)
 
 
   ## RESULT:
